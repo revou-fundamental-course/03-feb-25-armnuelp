@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("4k.jpeg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 50%;
+    margin: 50px auto;
+    color: #f8f9f8;
+    color: #0056b3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border: .5px solid rgb(55, 54, 54);
+}
+
+.container:hover{
+    backdrop-filter: blur(70px);
+    transition: 1.5s;
+    color: black;
+}
+
+.container:not(hover){
+    width: 50%;
+    color: #f8f9f8;
+    margin: 50px auto;
+    transition: 1s;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 2px rgb(207, 187, 187), 0.2em 0.2em .5em rgb(119, 80, 80), 0 0 0.2em rgb(101, 101, 137);
+    animation: bounce 2s ease infinite;
+    
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-10px);}
+	60% {transform: translateY(-7px);}
+}
+
+h3{
+    font-size: 15px;
+    text-align: left;
+}
+
+.input-group, .output-group {
+    margin: 15px 0;
+}
+
+label {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input:hover{    
+        width: 100%;
+        transition: 1s;
+        border: #0f329c;      
+}
+
+input:not(hover){
+    transition: 1s;
+    width: 80%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    background: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#formulah {
+    font-size: 18px;
+    font-weight: bold;
+    background: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
+}
+#explain {
+    
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: bold;
+    background: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: white;
+    background-color: #15a213;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #5bec75;
+    color: black;
+    box-shadow: 1px 1px 2px rgb(228, 223, 223), 0 0 1em rgb(169, 165, 167), 0 0 0.2em rgb(12, 12, 14);
+}
+
+#reverse {
+    background-color: #9f6e23;
+}
+
+#reverse:hover {
+    background-color: #fbc676;
+    color: rgb(15, 14, 14);
+    box-shadow: 1px 1px 2px rgb(228, 223, 223), 0 0 1em rgb(169, 165, 167), 0 0 0.2em rgb(12, 12, 14);
+}

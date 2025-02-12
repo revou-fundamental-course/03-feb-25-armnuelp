@@ -1,12 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KONVERSI SUHU</title>
-   
+    <title>Konfersi Suhu</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     
+    <div class="container">
+        <h2>KONVERSI SUHU</h2>
+        <h3>masukan suhu derajat celsius (&deg;C) ke kotak dibawah, lalu klik tombol konversi untuk mendapatkan hasil konversi dalam bentuk farenheit (&deg;F).</h3>
+        <div class="input-group">
+            <label id="input-label" for="temperature">Masukkan suhu dalam Celsius (°C):</label>
+            <input type="number" id="temperature" placeholder="Masukkan suhu" required>
+        </div>
+
+        <button id="reverse">Reverse</button>
+        <button id="convert">Convert</button>
+        <button id="reset">Reset</button>
+
+        <div class="output-group">
+            <label id="output-label">Hasil dalam Fahrenheit (°F):</label>
+            <div id="result">-</div>
+        </div>
+  
+        <div>
+            <label for="formula" id="form-label"> Rumus </label>
+            <div id="formulah">-</div>
+        </div>
+        <hr>
+        <label for="penjelasan" id="penjelasan">Penjelasan</label>
+        <div id="explain">-</div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,72 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const inputField = document.getElementById("temperature");
+    const resultField = document.getElementById("result");
+    const convertBtn = document.getElementById("convert");
+    const reverseBtn = document.getElementById("reverse");
+    const inputLabel = document.getElementById("input-label");
+    const outputLabel = document.getElementById("output-label");
+    const formLabel = document.getElementById("form-label");
+    const rumus = document.getElementById("formulah");
+    const ResetBtn = document.getElementById("reset");
+    const Penjelasan = document.getElementById("explain");
+
+    let isCelsiusToFahrenheit = true; //mode awal celcius mode
+
+    // Fungsi button vonvert 
+    function convertTemperature() {
+        let inputValue = parseFloat(inputField.value);
+
+        if (!isNaN(inputValue)) {
+            let result;
+            if (isCelsiusToFahrenheit) {
+                result = (inputValue * 9/5) + 32;
+                resultField.textContent = result.toFixed(2) + " °F";
+                rumus.textContent =  `(${inputValue} x 9/5) + 32`
+                Penjelasan.textContent ="Cara konversi suhu dari Celcius (°C) ke Fahrenheit(°F) Suhu S dalam derajat Fahrenheit (°F) = suhu S dalam derajat Celcius (°C) kali 9/5 tambah 32. S(°F) = (S(°C) x 9/5) + 32";
+            } else {
+                result = (inputValue - 32) * 5/9;
+                resultField.textContent = result.toFixed(2) + " °C";
+                rumus.textContent = `(${inputValue} - 32) x 5/9`;
+                
+            }
+        } else {
+            alert("Masukkan angka yang valid!");
+        }
+    }
+    //fungsi reset button
+    function ResetDisplay(){
+        inputField.value = "";
+        resultField.textContent = "-";
+        rumus.textContent = "-"
+        Penjelasan.textContent ="-";
+
+    }
+
+    // Fungsi reverse button mode bjir
+    function reverseConversion() {
+        isCelsiusToFahrenheit = !isCelsiusToFahrenheit;
+
+        if (isCelsiusToFahrenheit) {
+            inputLabel.textContent = "Masukkan suhu dalam Celsius (°C):";
+            outputLabel.textContent = "Hasil dalam Fahrenheit (°F):";
+            formLabel.textContent = "Rumus konversi Celcius to Fahrenheit"
+            
+        } else {
+            inputLabel.textContent = "Masukkan suhu dalam Fahrenheit (°F):";
+            outputLabel.textContent = "Hasil dalam Celsius (°C):";
+            formLabel.textContent = "Rumus konversi Fahrenheit to Celcius"
+            
+        }
+
+        // awal bukanlah akhir
+        inputField.value = "";
+        resultField.textContent = "-";
+        rumus.textContent = "-"
+        Penjelasan.textContent ="-"
+    }
+
+    // kondisi button ketika di klik bjir
+    convertBtn.addEventListener("click", convertTemperature);
+    reverseBtn.addEventListener("click", reverseConversion);
+    ResetBtn.addEventListener("click", ResetDisplay);
+});
