@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const formLabel = document.getElementById("form-label");
     const rumus = document.getElementById("formulah");
     const ResetBtn = document.getElementById("reset");
-    const Penjelasan = document.getElementById("explain");
+    const explainBtn = document.getElementById("explain");
 
     let isCelsiusToFahrenheit = true; //mode awal celcius mode
 
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 result = (inputValue * 9/5) + 32;
                 resultField.textContent = result.toFixed(2) + " °F";
                 rumus.textContent =  `(${inputValue} x 9/5) + 32`
-                Penjelasan.textContent ="Cara konversi suhu dari Celcius (°C) ke Fahrenheit(°F) Suhu S dalam derajat Fahrenheit (°F) = suhu S dalam derajat Celcius (°C) kali 9/5 tambah 32. S(°F) = (S(°C) x 9/5) + 32";
+               
             } else {
                 result = (inputValue - 32) * 5/9;
                 resultField.textContent = result.toFixed(2) + " °C";
@@ -41,6 +41,15 @@ document.addEventListener("DOMContentLoaded", function () {
         Penjelasan.textContent ="-";
 
     }
+
+    function ExplainDisplay(){
+        if (isCelsiusToFahrenheit) {
+        rumus.textContent= "Cara konversi suhu dari Celcius (°C) ke Fahrenheit(°F) Suhu S dalam derajat Fahrenheit (°F) = suhu S dalam derajat Celcius (°C) kali 9/5 tambah 32. S(°F) = (S(°C) x 9/5) + 32";
+    }
+    else{
+        rumus.textContent="Cara konversi suhu dari Fahrenheit (°F) ke Celcius(°C). Suhu S dalam derajat Celcius (°C) = suhu S dalam derajat (Fahrenheit (°F) dikurangi 32) lalu dikalikan dengan 9/5. S(°C) = (S(°F)-32) x 9/5"
+    }
+}
 
     // Fungsi reverse button mode bjir
     function reverseConversion() {
@@ -69,4 +78,5 @@ document.addEventListener("DOMContentLoaded", function () {
     convertBtn.addEventListener("click", convertTemperature);
     reverseBtn.addEventListener("click", reverseConversion);
     ResetBtn.addEventListener("click", ResetDisplay);
+    explainBtn.addEventListener("click", ExplainDisplay);
 });

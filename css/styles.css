@@ -12,9 +12,9 @@ body {
 
 
 .container {
-    width: 50%;
+    width: 90%;
     max-height: 100vh;
-    margin: 50px auto;
+    margin: 30px auto;
     color: #f8f9f8;
     color: #0056b3;
     padding: 20px;
@@ -32,7 +32,7 @@ body {
 .container:not(hover){
     width: 50%;
     color: #f8f9f8;
-    margin: 50px auto;
+    margin: 30px auto;
     transition: 1s;
     padding: 20px;
     border-radius: 10px;
@@ -105,14 +105,14 @@ input:not(hover){
 #formulah {
     font-size: 18px;
     font-weight: bold;
-    background: #f8f8f8;
+    background: hsl(0, 0%, 97%);
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 80%;
     margin: 0 auto;
 }
-#explain {
+/* #explain {
     
     letter-spacing: 1px;
     font-size: 18px;
@@ -123,7 +123,7 @@ input:not(hover){
     border-radius: 5px;
     width: 80%;
     margin: 0 auto;
-}
+} */
 
 
 button {
