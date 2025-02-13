@@ -1,9 +1,10 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: url("4k.jpeg");
+    background-image: url(../assets/4k.jpeg);
     background-repeat: no-repeat;
     background-size: 100%;
     text-align: center;
+    height: 100vh;
     margin: 0;
     padding: 0;
 }
