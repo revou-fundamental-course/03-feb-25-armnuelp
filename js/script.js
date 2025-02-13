@@ -22,12 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 result = (inputValue * 9/5) + 32;
                 resultField.textContent = result.toFixed(2) + " °F";
                 rumus.textContent =  `(${inputValue} x 9/5) + 32`
+                formLabel.textContent= "Rumus"
                
             } else {
                 result = (inputValue - 32) * 5/9;
                 resultField.textContent = result.toFixed(2) + " °C";
                 rumus.textContent = `(${inputValue} - 32) x 5/9`;
-                
+                formLabel.textContent= "Rumus"
             }
         } else {
             alert("Masukkan angka yang valid!");
@@ -39,14 +40,17 @@ document.addEventListener("DOMContentLoaded", function () {
         resultField.textContent = "-";
         rumus.textContent = "-"
         Penjelasan.textContent ="-";
+        formLabel.textContent= "Rumus"
 
     }
 
     function ExplainDisplay(){
         if (isCelsiusToFahrenheit) {
+        formLabel.textContent= "Penjelasan C to F"
         rumus.textContent= "Cara konversi suhu dari Celcius (°C) ke Fahrenheit(°F) Suhu S dalam derajat Fahrenheit (°F) = suhu S dalam derajat Celcius (°C) kali 9/5 tambah 32. S(°F) = (S(°C) x 9/5) + 32";
     }
     else{
+        formLabel.textContent= "Penjelasan F to C"
         rumus.textContent="Cara konversi suhu dari Fahrenheit (°F) ke Celcius(°C). Suhu S dalam derajat Celcius (°C) = suhu S dalam derajat (Fahrenheit (°F) dikurangi 32) lalu dikalikan dengan 9/5. S(°C) = (S(°F)-32) x 9/5"
     }
 }
@@ -59,12 +63,13 @@ document.addEventListener("DOMContentLoaded", function () {
             inputLabel.textContent = "Masukkan suhu dalam Celsius (°C):";
             outputLabel.textContent = "Hasil dalam Fahrenheit (°F):";
             formLabel.textContent = "Rumus konversi Celcius to Fahrenheit"
-            
+            formLabel.textContent= "Rumus"
+
         } else {
             inputLabel.textContent = "Masukkan suhu dalam Fahrenheit (°F):";
             outputLabel.textContent = "Hasil dalam Celsius (°C):";
             formLabel.textContent = "Rumus konversi Fahrenheit to Celcius"
-            
+            formLabel.textContent= "Rumus"
         }
 
         // awal bukanlah akhir
