@@ -1,8 +1,7 @@
 body {
     font-family: Arial, sans-serif;
-   background-image: url(../assets/4k.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: linear-gradient(to left, rgb(233, 141, 141) , rgb(216, 216, 92), rgb(241, 138, 138),orange, rgb(76, 43, 43));
+    background-size: 100%;
     text-align: center;
     margin: 0;
     padding: 0;
