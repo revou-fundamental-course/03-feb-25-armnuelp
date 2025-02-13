@@ -1,14 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    background-image: linear-gradient(to left, rgb(233, 141, 141) , rgb(216, 216, 92), rgb(241, 138, 138),orange, rgb(76, 43, 43));
-    background-size: 100%;
+    background-image: url(../assets/4k.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     text-align: center;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
+
+
 
 .container {
     width: 50%;
+    max-height: 100vh;
     margin: 50px auto;
     color: #f8f9f8;
     color: #0056b3;
