@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
         resultField.textContent = "-";
         rumus.textContent = "-"
         Penjelasan.textContent ="-";
-        formLabel.textContent= "Rumus"
+        formLabel.textContent= "Rumus";
 
     }
 
